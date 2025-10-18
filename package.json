@@ -31,7 +31,15 @@
   "deploy": "gh-pages -d dist"
 }
 
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "lint": "eslint .",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
 }
+
 {
   "homepage": "https://vishwakarmasuraj333.github.io/React-portfolio/"
 }
