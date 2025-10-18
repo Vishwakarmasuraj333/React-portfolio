@@ -1,3 +1,7 @@
+
+{
+  "homepage": "https://vishwakarmasuraj333.github.io/React-portfolio/"
+}
 {
   "name": "my-react-app",
   "private": true,
@@ -40,6 +44,4 @@
   "deploy": "gh-pages -d dist"
 }
 
-{
-  "homepage": "https://vishwakarmasuraj333.github.io/React-portfolio/"
-}
+
