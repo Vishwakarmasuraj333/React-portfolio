@@ -1,0 +1,141 @@
+.projects {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(14, 226, 202, 0.3);
+  text-align: center;
+
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden; /* shimmer ke liye zaruri */
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(223, 230, 40, 0.4);
+}
+
+/* White flash (chamak) effect */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  left: 125%; /* right to left animation */
+  transition: left 0.9s ease-in-out;
+}
+
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-card .btn:hover {
+  background-color: #0097a7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card .btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  * {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-card img {
+    height: 120px;
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeUp 1.3s ease-in-out;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.Contact {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.Contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.Contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: slideFill 1.5s ease forwards;
+}
+
+@keyframes slideFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--fill-width);
+    }
+}
+
+.Contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.Contact-info {
+    background: #12bdec;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    text-align: center;
+}
+
+.Contact-info h3 {
+    color: #3309d8;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.Contact-info p {
+    margin: 10px 0;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Contact-info a {
+    color: #4a17f1;
+    text-decoration: none;
+}
+
+.Contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .Contact-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .Contact-form,
+    .Contact-info {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .Contact-info p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

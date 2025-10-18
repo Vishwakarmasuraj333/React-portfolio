@@ -1,0 +1,53 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 8px rgba(255, 235, 59, 0.8);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+
+  .header nav {
+    margin-top: 15px;
+  }
+
+  .header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
